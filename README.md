@@ -6,6 +6,8 @@ AI 可以越来越快地给方案、写内容和推进执行，但速度不会�
 
 Su-Founder OS 是一套个人判断操作系统。它不收集所有聊天，也不替人思考；它保存经过验证的原则、重要选择的理由、实验结果和可复用能力，让未来的自己与 AI 能够继续沿着同一条判断链工作。
 
+这是 Su 在真实产品、商业判断与 AI 协作中逐步形成的个人系统的公开脱敏版。它不是标准答案，也不是可执行的软件项目，而是一套可以复制、删改和重新组织的方法与模板。
+
 ![Su-Founder OS Router 运行图](assets/founder-os-router-flow.svg)
 
 ## 它与知识库有什么不同
@@ -31,14 +33,18 @@ Founder OS 保护的不是过去答案的永久正确，而是判断的连续性
 | 执行接口 | 保存可复用提示、能力与交接方式 |
 | 维护机制 | 管理捕获、验证、晋升与定期清理 |
 
+上表描述的是一套 Founder OS 可能承担的判断层，不是本仓库的文件清单。当前公开版只提供两份空白模板、两套公开 Prompt、结构说明和通用方法；其他内容需要由你根据自己的真实经历逐步建立。
+
 完整说明见 [《Founder OS 公开介绍》](docs/introduction.md)。
 
-## 最短使用方式
+## 先选择你的起点
 
-1. 阅读公开介绍，理解系统解决什么问题。
-2. 复制一份 [Decision Log](templates/decision-log.md)，记录下一次重要取舍。
-3. 复制一份 [Experiment Review](templates/experiment-review.md)，记录下一次真实验证。
-4. 当你已经积累了一些原则、历史决定或可复用能力后，使用下面的快捷调用。
+### 路线 A：你已经有一些原则、决定或复盘
+
+1. 把需要的模板复制到自己的私密空间，例如本地 Markdown、Obsidian 或 Private Repo。
+2. 用 [Decision Log](templates/decision-log.md) 记录重要取舍，用 [Experiment Review](templates/experiment-review.md) 记录真实验证。
+3. 把已经确认的原则、边界和历史决定整理成 AI 可以按需读取的文件。
+4. 使用下面的快捷调用处理当前问题。
 
 ```text
 使用 Founder OS Router 分析下面的问题。
@@ -49,6 +55,46 @@ Founder OS 保护的不是过去答案的永久正确，而是判断的连续性
 ```
 
 使用说明和缺失上下文的处理方式见 [《快捷调用》](docs/quick-call.md)。完整的通用路由规则与 Prompt 分别见 [《公开路由系统》](docs/router-system.md) 和 [Router Prompt](prompts/founder-os-router.md)。
+
+### 路线 B：你还没有 Founder OS
+
+复制下面这段 Prompt，让 AI 从一个真实问题开始陪你搭建最小可用版本：
+
+```text
+你是我的 Founder OS 搭建陪跑者。
+
+你的任务不是复制 Su 的内容，也不是一次生成一套看似完整的空壳，
+而是通过多轮对话，从我的真实经历、当前工作和重要决定中，
+陪我搭建一个最小可用、能够持续演化的个人判断系统。
+
+规则：
+1. 每轮最多问我 3 个问题。
+2. 允许我回答“不知道、说不清、你帮我判断”。
+3. 可以从一个真实决定、一次失败实验或当前最难的问题开始。
+4. 区分已确认事实、你的推断和仍待验证的假设，不得替我编造经历。
+5. 先帮助我解决一个真实问题，再判断哪些内容值得长期保存。
+6. 在创建目录或文件前，先复述你对我的理解并让我确认。
+7. 只创建当前真正需要的最小结构，不要追求目录完整。
+
+最终请帮我形成：
+- 我的使用场景与边界；
+- 已确认的长期原则；
+- 第一份基于真实材料的 Decision Log 或 Experiment Review；
+- 一个适合我的 Founder OS Router；
+- 后续维护与隐私建议。
+
+现在先给我 3 种低压力的开始方式，让我选择。不要直接生成最终系统。
+```
+
+需要更完整的交互、确认和文件生成规则时，使用 [Founder OS 搭建陪跑 Prompt](prompts/build-your-founder-os.md)。
+
+## 你可以怎样改
+
+- 只保留与你有关的模块，也可以修改目录、命名和顺序；
+- 用自己的真实经历、原则、Decision 和 Experiment 替换公开示例，不要把 Su 的具体判断当成自己的结论；
+- 先从能解决当前问题的最小结构开始，有真实内容后再增加模块；
+- 把个人经历、客户资料、金额和未公开判断留在自己的私密空间；
+- 如果公开发布改编版，需要保留来源、标明修改并遵守相同许可。
 
 ## 公开版不包含什么
 
@@ -77,6 +123,7 @@ Founder OS 保护的不是过去答案的永久正确，而是判断的连续性
 - [Founder OS 公开路由系统](docs/router-system.md)
 - [快捷调用](docs/quick-call.md)
 - [Founder OS Router Prompt](prompts/founder-os-router.md)
+- [Founder OS 搭建陪跑 Prompt](prompts/build-your-founder-os.md)
 - [Decision Log 空白模板](templates/decision-log.md)
 - [Experiment Review 空白模板](templates/experiment-review.md)
 - [许可说明](LICENSE.md)
